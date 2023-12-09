@@ -17,7 +17,9 @@ wss.on("connection", async (ws, req) => {
 });
 
 app.get("/health", (req, res) => {
-    res.json({msg: "I am healthy"})
+    res.json({ msg: "I am healthy" })
 })
 
-server.listen(port);
+server.listen(port, () => {
+    console.log("start listening...")
+});
