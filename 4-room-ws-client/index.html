@@ -9,7 +9,7 @@
                     payload: {
                         message: document.getElementById("inputbox").value
                     }
-                }));
+                }));        
             }
             webSocket.onmessage = function (event) {
                 const data = JSON.parse(event.data);
