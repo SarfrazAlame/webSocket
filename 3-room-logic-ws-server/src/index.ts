@@ -46,4 +46,6 @@ wss.on("connection", async (ws, req) => {
     });
 });
 
-server.listen(port);
+server.listen(port,()=>{
+    console.log("started")
+});
