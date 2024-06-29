@@ -32,7 +32,7 @@ app.listen(PORT, () => {
 async function expensiveOperation() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     return {
-        username: "kirat",
-        email: "kirat@gmail.com"
+        username: "sarfraz ",
+        email: "sarfraz@gmail.com"
     }
 }
