@@ -3,11 +3,12 @@ import http from 'http';
 
 const server = http.createServer(function(request: any, response: any) {
     console.log((new Date()) + ' Received request for ' + request.url);
-    response.end("hi there");
+    response.end("hi theres");
 });
 
 const wss = new WebSocketServer({ server });
 
+let userCount = 0;
 wss.on('connection', function connection(ws) {
   ws.on('error', console.error);
 
@@ -18,6 +19,8 @@ wss.on('connection', function connection(ws) {
       }
     });
   });
+
+  console.log("user connected", ++userCount)
 
   ws.send('Hello! Message From Server!!');
 });
