@@ -13,6 +13,7 @@
             }
             webSocket.onmessage = function (event) {
                 const data = JSON.parse(event.data);
+                console.log(data)
                 if (data.type === "message") {
                     document.getElementById("serverMessages").appendChild(document.createTextNode(data.payload.message));
                     document.getElementById("serverMessages").appendChild(document.createElement("br"));
